@@ -7,8 +7,8 @@ MCP server for the [Hevy](https://hevy.com/) workout tracking API.
 Requires [Hevy Pro](https://hevy.com/settings?developer) for API access.
 
 ```bash
-npm install
-npm run build
+bun install
+bun run build
 ```
 
 Add to your MCP config (e.g. `~/.claude/settings.json`):
@@ -53,15 +53,15 @@ Add to your MCP config (e.g. `~/.claude/settings.json`):
 ## Development
 
 ```bash
-npm test              # unit tests
-npm run test:watch    # watch mode
-npm run check         # lint & format check
-npm run check:fix     # auto-fix
-npm run generate-types  # regenerate types from OpenAPI spec
+bun test              # unit tests
+bun run test:watch    # watch mode
+bun run check         # lint & format check
+bun run check:fix     # auto-fix
+bun run generate-types  # regenerate types from OpenAPI spec
 ```
 
 Integration tests (requires API key):
 
 ```bash
-HEVY_API_KEY=your-key npm run test:integration
+HEVY_API_KEY=your-key bun run test:integration
 ```
