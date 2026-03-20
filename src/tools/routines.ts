@@ -89,8 +89,9 @@ export function registerRoutineTools(server: McpServer, client: HevyClient): voi
       title: z.string().describe("The title of the routine"),
       folder_id: z
         .number()
+        .int()
         .nullable()
-        .optional()
+        .default(null)
         .describe("Folder ID to add the routine to. Null for default folder."),
       notes: z.string().optional().describe("Additional notes for the routine"),
       exercises: z.array(routineExerciseSchema).describe("Array of exercises with their sets"),
