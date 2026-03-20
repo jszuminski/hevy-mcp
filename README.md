@@ -4,21 +4,42 @@ MCP server for the [Hevy](https://hevy.com/) workout tracking API.
 
 ## Setup
 
-Requires [Hevy Pro](https://hevy.com/settings?developer) for API access.
+Requires [Hevy Pro](https://hevy.com/settings?developer) for an API key.
 
 ```bash
+git clone https://github.com/jszuminski/hevy-mcp.git
+cd hevy-mcp
 bun install
-bun run build
 ```
 
-Add to your MCP config (e.g. `~/.claude/settings.json`):
+### Claude Code
+
+Add to `~/.claude/settings.json`:
 
 ```json
 {
   "mcpServers": {
     "hevy": {
-      "command": "node",
-      "args": ["/path/to/hevy-mcp/dist/index.js"],
+      "command": "bun",
+      "args": ["run", "/path/to/hevy-mcp/src/index.ts"],
+      "env": {
+        "HEVY_API_KEY": "your-api-key"
+      }
+    }
+  }
+}
+```
+
+### Claude Desktop
+
+Add to `~/Library/Application Support/Claude/claude_desktop_config.json` (macOS) or `%APPDATA%\Claude\claude_desktop_config.json` (Windows):
+
+```json
+{
+  "mcpServers": {
+    "hevy": {
+      "command": "bun",
+      "args": ["run", "/path/to/hevy-mcp/src/index.ts"],
       "env": {
         "HEVY_API_KEY": "your-api-key"
       }
