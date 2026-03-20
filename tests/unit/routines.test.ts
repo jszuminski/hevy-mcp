@@ -1,13 +1,13 @@
 import type { Client } from "@modelcontextprotocol/sdk/client/index.js";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
-import { registerRoutineTools } from "../../src/tools/routines.js";
+import { registerRoutineTools } from "../../src/tools/routines";
 import {
   createMockClient,
   createTestHarness,
   getTextContent,
   mockError,
   mockSuccess,
-} from "../helpers.js";
+} from "../helpers";
 
 describe("routine tools", () => {
   let client: Client;

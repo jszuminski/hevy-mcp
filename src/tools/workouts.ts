@@ -1,6 +1,6 @@
 import type { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { z } from "zod";
-import type { HevyClient } from "../client.js";
+import type { HevyClient } from "../client";
 
 export function registerWorkoutTools(server: McpServer, client: HevyClient): void {
   server.tool(
