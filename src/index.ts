@@ -1,11 +1,11 @@
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
-import { createHevyClient } from "./client";
-import { registerExerciseTools } from "./tools/exercises";
-import { registerFolderTools } from "./tools/folders";
-import { registerRoutineTools } from "./tools/routines";
-import { registerUserTools } from "./tools/user";
-import { registerWorkoutTools } from "./tools/workouts";
+import { createHevyClient } from "./client.js";
+import { registerExerciseTools } from "./tools/exercises.js";
+import { registerFolderTools } from "./tools/folders.js";
+import { registerRoutineTools } from "./tools/routines.js";
+import { registerUserTools } from "./tools/user.js";
+import { registerWorkoutTools } from "./tools/workouts.js";
 
 function getApiKey(): string {
   const apiKey = process.env.HEVY_API_KEY;

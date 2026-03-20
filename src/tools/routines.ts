@@ -1,6 +1,6 @@
 import type { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { z } from "zod";
-import type { HevyClient } from "../client";
+import type { HevyClient } from "../client.js";
 
 const routineSetSchema = z.object({
   type: z.enum(["warmup", "normal", "failure", "dropset"]).describe("The type of set"),

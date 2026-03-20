@@ -1,6 +1,6 @@
 import type { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { z } from "zod";
-import type { HevyClient } from "../client";
+import type { HevyClient } from "../client.js";
 
 const muscleGroupEnum = z.enum([
   "abdominals",

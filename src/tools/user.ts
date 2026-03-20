@@ -1,5 +1,5 @@
 import type { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
-import type { HevyClient } from "../client";
+import type { HevyClient } from "../client.js";
 
 export function registerUserTools(server: McpServer, client: HevyClient): void {
   server.tool(

@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { createHevyClient } from "../../src/client";
+import { createHevyClient } from "../../src/client.js";
 
 describe("createHevyClient", () => {
   it("creates a client with the provided API key", () => {

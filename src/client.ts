@@ -1,5 +1,5 @@
 import createClient, { type Client } from "openapi-fetch";
-import type { paths } from "./generated/hevy-api";
+import type { paths } from "./generated/hevy-api.js";
 
 const BASE_URL = "https://api.hevyapp.com";
 

@@ -2,12 +2,12 @@ import { Client } from "@modelcontextprotocol/sdk/client/index.js";
 import { InMemoryTransport } from "@modelcontextprotocol/sdk/inMemory.js";
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { afterAll, beforeAll, describe, expect, it } from "vitest";
-import { createHevyClient } from "../../src/client";
-import { registerExerciseTools } from "../../src/tools/exercises";
-import { registerFolderTools } from "../../src/tools/folders";
-import { registerRoutineTools } from "../../src/tools/routines";
-import { registerUserTools } from "../../src/tools/user";
-import { registerWorkoutTools } from "../../src/tools/workouts";
+import { createHevyClient } from "../../src/client.js";
+import { registerExerciseTools } from "../../src/tools/exercises.js";
+import { registerFolderTools } from "../../src/tools/folders.js";
+import { registerRoutineTools } from "../../src/tools/routines.js";
+import { registerUserTools } from "../../src/tools/user.js";
+import { registerWorkoutTools } from "../../src/tools/workouts.js";
 
 const API_KEY = process.env.HEVY_API_KEY;
 

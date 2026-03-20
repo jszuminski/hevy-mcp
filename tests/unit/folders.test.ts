@@ -1,7 +1,7 @@
 import type { Client } from "@modelcontextprotocol/sdk/client/index.js";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
-import { registerFolderTools } from "../../src/tools/folders";
-import { createMockClient, createTestHarness, getTextContent, mockSuccess } from "../helpers";
+import { registerFolderTools } from "../../src/tools/folders.js";
+import { createMockClient, createTestHarness, getTextContent, mockSuccess } from "../helpers.js";
 
 describe("folder tools", () => {
   let client: Client;

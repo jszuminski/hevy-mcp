@@ -10,18 +10,19 @@ Requires [Hevy Pro](https://hevy.com/settings?developer) for an API key.
 git clone https://github.com/jszuminski/hevy-mcp.git
 cd hevy-mcp
 bun install
+bun run build
 ```
 
 ### Claude Code
 
-Add to `~/.claude/settings.json`:
+Add to `~/.claude/.mcp.json`:
 
 ```json
 {
   "mcpServers": {
     "hevy": {
-      "command": "bun",
-      "args": ["run", "/path/to/hevy-mcp/src/index.ts"],
+      "command": "node",
+      "args": ["/path/to/hevy-mcp/dist/index.js"],
       "env": {
         "HEVY_API_KEY": "your-api-key"
       }
@@ -38,8 +39,8 @@ Add to `~/Library/Application Support/Claude/claude_desktop_config.json` (macOS)
 {
   "mcpServers": {
     "hevy": {
-      "command": "bun",
-      "args": ["run", "/path/to/hevy-mcp/src/index.ts"],
+      "command": "node",
+      "args": ["/path/to/hevy-mcp/dist/index.js"],
       "env": {
         "HEVY_API_KEY": "your-api-key"
       }
